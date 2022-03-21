@@ -10,5 +10,5 @@ import SwiftUI
 struct Guess {
 	
 	let index: Int
-	var colors = [Color](repeating: Color(K.Colors.silver), count: 4)
+	var colors = [Color](repeating: Color.silver, count: 4)
 }

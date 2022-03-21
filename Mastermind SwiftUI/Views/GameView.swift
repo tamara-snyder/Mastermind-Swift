@@ -10,7 +10,7 @@ import SwiftUI
 struct GameView: View {
     var body: some View {
 		ZStack {
-			Color(K.Colors.darkGray).ignoresSafeArea()
+			Color.background.ignoresSafeArea()
 			VStack {
 				Group {
 					// guess: gameData.guesses[0]

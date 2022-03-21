@@ -16,36 +16,36 @@ struct InputView: View {
 		
 		HStack {
 
-			Circle().fill(Color(K.Colors.red))
+			Circle().fill(Color.red)
 				.onTapGesture {
 					gameBrain.addData(color: "red")
 				}
-			Circle().fill(Color(K.Colors.orange))
+			Circle().fill(Color.orange)
 				.onTapGesture {
 					gameBrain.addData(color: "orange")
 				}
-			Circle().fill(Color(K.Colors.yellow))
+			Circle().fill(Color.yellow)
 				.onTapGesture {
 					gameBrain.addData(color: "yellow")
 				}
-			Circle().fill(Color(K.Colors.green))
+			Circle().fill(Color.green)
 				.onTapGesture {
 					gameBrain.addData(color: "green")
 				}
-			Circle().fill(Color(K.Colors.blue))
+			Circle().fill(Color.blue)
 				.onTapGesture {
 					gameBrain.addData(color: "blue")
 				}
-			Circle().fill(Color(K.Colors.purple))
+			Circle().fill(Color.purple)
 				.onTapGesture {
 					gameBrain.addData(color: "purple")
 				}
 			
-			Divider().background(Color(K.Colors.gray))
+			Divider().background(Color.gray)
 			
 	
 			Image(systemName: "delete.backward.fill")
-				.foregroundColor(Color(K.Colors.gray))
+				.foregroundColor(Color.gray)
 				.font(.system(size: 32))
 				.onTapGesture {
 					gameBrain.backspacePressed()

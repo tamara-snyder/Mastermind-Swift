@@ -15,20 +15,20 @@ struct RowView: View {
 //					ForEach(0...3, id: \.self) { index in
 //						Circle().fill(guess.colors[index])
 //					}
-					Circle().fill(Color(K.Colors.silver))
-					Circle().fill(Color(K.Colors.silver))
-					Circle().fill(Color(K.Colors.silver))
-					Circle().fill(Color(K.Colors.silver))
+					Circle().fill(Color.silver)
+					Circle().fill(Color.silver)
+					Circle().fill(Color.silver)
+					Circle().fill(Color.silver)
 				}
 				
 				VStack(spacing: 10) {
 					HStack {
-						Circle().fill(Color(K.Colors.silver))
-						Circle().fill(Color(K.Colors.silver))
+						Circle().fill(Color.silver)
+						Circle().fill(Color.silver)
 					}
 					HStack {
-						Circle().fill(Color(K.Colors.silver))
-						Circle().fill(Color(K.Colors.silver))
+						Circle().fill(Color.silver)
+						Circle().fill(Color.silver)
 					}
 				}
 				.aspectRatio(1, contentMode: .fit)
@@ -36,7 +36,7 @@ struct RowView: View {
 			.padding(.horizontal)
 			.frame(maxHeight: 50)
 			
-			Divider().background(Color(K.Colors.gray))
+			Divider().background(Color.gray)
 			
 		}
     }
