@@ -11,6 +11,7 @@
 		3E120DC827E8C58D00AE4D53 /* Guess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E120DC727E8C58D00AE4D53 /* Guess.swift */; };
 		3E120DCD27E8C63000AE4D53 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E120DCC27E8C63000AE4D53 /* Color.swift */; };
 		3E120DCF27E8C77700AE4D53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E120DCE27E8C77700AE4D53 /* Assets.xcassets */; };
+		3E120DD127E8CDA800AE4D53 /* GuessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E120DD027E8CDA800AE4D53 /* GuessView.swift */; };
 		3E9BF1C327E8C01500EB4257 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9BF1C227E8C01500EB4257 /* InputView.swift */; };
 		3E9BF1C627E8C06A00EB4257 /* GameBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9BF1C527E8C06A00EB4257 /* GameBrain.swift */; };
 		3E9BF1CA27E8C1FE00EB4257 /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9BF1C927E8C1FE00EB4257 /* RowView.swift */; };
@@ -24,6 +25,7 @@
 		3E120DC727E8C58D00AE4D53 /* Guess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guess.swift; sourceTree = "<group>"; };
 		3E120DCC27E8C63000AE4D53 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		3E120DCE27E8C77700AE4D53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../Mastermind/Mastermind/Assets.xcassets; sourceTree = "<group>"; };
+		3E120DD027E8CDA800AE4D53 /* GuessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessView.swift; sourceTree = "<group>"; };
 		3E1B607F27E8299C00C4AEE7 /* Mastermind SwiftUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Mastermind SwiftUI.entitlements"; sourceTree = "<group>"; };
 		3E9BF1C227E8C01500EB4257 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		3E9BF1C527E8C06A00EB4257 /* GameBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBrain.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				3EDA3CAC27E3B69000799E58 /* GameView.swift */,
 				3E9BF1C227E8C01500EB4257 /* InputView.swift */,
 				3E9BF1C927E8C1FE00EB4257 /* RowView.swift */,
+				3E120DD027E8CDA800AE4D53 /* GuessView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				3E120DC527E8C55C00AE4D53 /* GameDataModel.swift in Sources */,
 				3E9BF1C327E8C01500EB4257 /* InputView.swift in Sources */,
 				3E120DC827E8C58D00AE4D53 /* Guess.swift in Sources */,
+				3E120DD127E8CDA800AE4D53 /* GuessView.swift in Sources */,
 				3EDA3CAD27E3B69000799E58 /* GameView.swift in Sources */,
 				3EDA3CAB27E3B69000799E58 /* Mastermind.swift in Sources */,
 				3E120DCD27E8C63000AE4D53 /* Color.swift in Sources */,

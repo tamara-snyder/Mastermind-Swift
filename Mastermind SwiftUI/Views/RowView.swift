@@ -8,18 +8,12 @@
 import SwiftUI
 
 struct RowView: View {
+	
+	
     var body: some View {
 		VStack {
 			HStack(spacing: 40) {
-				HStack {
-//					ForEach(0...3, id: \.self) { index in
-//						Circle().fill(guess.colors[index])
-//					}
-					Circle().fill(Color.silver)
-					Circle().fill(Color.silver)
-					Circle().fill(Color.silver)
-					Circle().fill(Color.silver)
-				}
+				GuessView(guess: .constant(Guess(index: 0)))
 				
 				VStack(spacing: 10) {
 					HStack {
