@@ -9,7 +9,9 @@ import SwiftUI
 
 struct InputView: View {
 	
-	@ObservedObject var gameBrain = GameBrain()
+	@StateObject var gameBrain: GameDataModel
+	
+	// @ObservedObject var gameBrain = GameBrain()
 	
     var body: some View {
 		
@@ -18,27 +20,27 @@ struct InputView: View {
 
 			Circle().fill(Color.red)
 				.onTapGesture {
-					gameBrain.addData(color: "red")
+					gameBrain.addData(color: Color.red)
 				}
 			Circle().fill(Color.orange)
 				.onTapGesture {
-					gameBrain.addData(color: "orange")
+					gameBrain.addData(color: Color.orange)
 				}
 			Circle().fill(Color.yellow)
 				.onTapGesture {
-					gameBrain.addData(color: "yellow")
+					gameBrain.addData(color: Color.yellow)
 				}
 			Circle().fill(Color.green)
 				.onTapGesture {
-					gameBrain.addData(color: "green")
+					gameBrain.addData(color: Color.green)
 				}
 			Circle().fill(Color.blue)
 				.onTapGesture {
-					gameBrain.addData(color: "blue")
+					gameBrain.addData(color: Color.blue)
 				}
 			Circle().fill(Color.purple)
 				.onTapGesture {
-					gameBrain.addData(color: "purple")
+					gameBrain.addData(color: Color.purple)
 				}
 			
 			Divider().background(Color.gray)
@@ -58,6 +60,7 @@ struct InputView: View {
 
 struct InputView_Previews: PreviewProvider {
     static var previews: some View {
-        InputView()
+		InputView(gameBrain: GameDataModel())
+			.environmentObject(GameDataModel())
     }
 }

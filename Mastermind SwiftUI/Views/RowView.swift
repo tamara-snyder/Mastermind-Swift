@@ -9,23 +9,14 @@ import SwiftUI
 
 struct RowView: View {
 	
+	@EnvironmentObject var dm: GameDataModel
 	
     var body: some View {
 		VStack {
 			HStack(spacing: 40) {
-				GuessView(guess: .constant(Guess(index: 0)))
+				GuessView(guess: $dm.guesses[GameBrain.turn])
 				
-				VStack(spacing: 10) {
-					HStack {
-						Circle().fill(Color.silver)
-						Circle().fill(Color.silver)
-					}
-					HStack {
-						Circle().fill(Color.silver)
-						Circle().fill(Color.silver)
-					}
-				}
-				.aspectRatio(1, contentMode: .fit)
+				FeedbackView()
 			}
 			.padding(.horizontal)
 			.frame(maxHeight: 50)
@@ -38,6 +29,7 @@ struct RowView: View {
 
 struct RowView_Previews: PreviewProvider {
     static var previews: some View {
-        RowView()
+		RowView()
+			.environmentObject(GameDataModel())
     }
 }

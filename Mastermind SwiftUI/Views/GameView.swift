@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct GameView: View {
+	
     var body: some View {
 		ZStack {
 			Color.background.ignoresSafeArea()
 			VStack {
 				Group {
-					// guess: gameData.guesses[0]
 					RowView()
 					RowView()
 					RowView()
@@ -21,6 +21,7 @@ struct GameView: View {
 					RowView()
 					RowView()
 				}
+				
 				Group {
 					RowView()
 					RowView()
@@ -36,7 +37,7 @@ struct GameView: View {
 					Spacer()
 					Spacer()
 					
-					InputView()
+					InputView(gameBrain: GameDataModel())
 					
 					Spacer()
 					Spacer()
