@@ -36,7 +36,7 @@ class GameDataModel: ObservableObject {
 			beadsFilled += 1
 		} else {
 			GameDataModel.turn += 1
-			beadsFilled = 0
+			beadsFilled = 1
 		}
 		
 		guesses[GameDataModel.turn].colors[beadsFilled - 1] = color
@@ -46,8 +46,8 @@ class GameDataModel: ObservableObject {
 	
 	func backspacePressed() {
 		if beadsFilled >= 1 && beadsFilled < 4 {
-//			guesses[GameDataModel.turn].removeLast()
+			guesses[GameDataModel.turn].colors[beadsFilled - 1] = Color.silver
 		}
-		print(guesses)
+		print(guesses[GameDataModel.turn].colors)
 	}
 }

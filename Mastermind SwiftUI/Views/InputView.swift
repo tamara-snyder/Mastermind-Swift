@@ -9,7 +9,7 @@ import SwiftUI
 
 struct InputView: View {
 	
-	@StateObject var gameBrain: GameDataModel
+	@EnvironmentObject var gameBrain: GameDataModel
 	
 	// @ObservedObject var gameBrain = GameBrain()
 	
@@ -60,7 +60,6 @@ struct InputView: View {
 
 struct InputView_Previews: PreviewProvider {
     static var previews: some View {
-		InputView(gameBrain: GameDataModel())
-			.environmentObject(GameDataModel())
+		InputView()
     }
 }

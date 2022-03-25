@@ -9,12 +9,12 @@ import SwiftUI
 
 struct RowView: View {
 	
-	@EnvironmentObject var dm: GameDataModel
+	@EnvironmentObject var gameBrain: GameDataModel
 	
     var body: some View {
 		VStack {
 			HStack(spacing: 40) {
-				GuessView(guess: $dm.guesses[GameBrain.turn])
+				GuessView(guess: $gameBrain.guesses[GameDataModel.turn])
 				
 				FeedbackView()
 			}
@@ -30,6 +30,5 @@ struct RowView: View {
 struct RowView_Previews: PreviewProvider {
     static var previews: some View {
 		RowView()
-			.environmentObject(GameDataModel())
     }
 }

@@ -9,6 +9,8 @@ import SwiftUI
 
 struct GameView: View {
 	
+	@EnvironmentObject var gameBrain: GameDataModel
+	
     var body: some View {
 		ZStack {
 			Color.background.ignoresSafeArea()
@@ -37,7 +39,7 @@ struct GameView: View {
 					Spacer()
 					Spacer()
 					
-					InputView(gameBrain: GameDataModel())
+					InputView()
 					
 					Spacer()
 					Spacer()
@@ -52,6 +54,6 @@ struct GameView: View {
 
 struct GameView_Previews: PreviewProvider {
     static var previews: some View {
-        GameView()
+		GameView()
     }
 }
