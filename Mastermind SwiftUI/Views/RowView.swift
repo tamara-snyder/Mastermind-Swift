@@ -9,13 +9,15 @@ import SwiftUI
 
 struct RowView: View {
 	
-	var gameBrain: Guess
+	var guess: Guess
+	var feedback: Feedback
+	
     var body: some View {
 		VStack {
 			HStack(spacing: 40) {
-				GuessView(guess: gameBrain)
+				GuessView(guess: guess)
 				
-				FeedbackView()
+				FeedbackView(feedback: feedback)
 			}
 			.padding(.horizontal)
 			.frame(maxHeight: 50)
@@ -28,6 +30,6 @@ struct RowView: View {
 
 struct RowView_Previews: PreviewProvider {
     static var previews: some View {
-		RowView(gameBrain: Guess(index: 0))
+		RowView(guess: Guess(index: 0), feedback: Feedback(index: 0))
     }
 }

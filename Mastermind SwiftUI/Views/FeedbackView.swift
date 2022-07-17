@@ -8,15 +8,18 @@
 import SwiftUI
 
 struct FeedbackView: View {
+	
+	@ObservedObject var feedback: Feedback
+	
     var body: some View {
 		VStack(spacing: 10) {
 			HStack {
-				Circle().fill(Color.silver)
-				Circle().fill(Color.silver)
+				Circle().fill(feedback.colors[0])
+				Circle().fill(feedback.colors[1])
 			}
 			HStack {
-				Circle().fill(Color.silver)
-				Circle().fill(Color.silver)
+				Circle().fill(feedback.colors[2])
+				Circle().fill(feedback.colors[3])
 			}
 		}
 		.aspectRatio(1, contentMode: .fit)
@@ -25,6 +28,6 @@ struct FeedbackView: View {
 
 struct FeedbackView_Previews: PreviewProvider {
     static var previews: some View {
-        FeedbackView()
+		FeedbackView(feedback: Feedback(index: 0))
     }
 }

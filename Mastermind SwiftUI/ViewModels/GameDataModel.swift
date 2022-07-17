@@ -10,10 +10,12 @@ import SwiftUI
 class GameDataModel: ObservableObject {
 	
 	@Published var guesses: [Guess] = []
+	@Published var feedback: [Feedback] = []
 	
 	private var turnsRemaining = 11
 	private var beadsFilled = 0
 	private var gameOver = false
+	private var secretCode: [Color] = []
 	
 	init() {
 		newGame()
@@ -21,9 +23,20 @@ class GameDataModel: ObservableObject {
 	
 	func newGame() {
 		guesses = []
+		feedback = []
+		secretCode = []
 		
 		for index in 0...turnsRemaining {
 			guesses.append(Guess(index: index))
+			feedback.append(Feedback(index: index))
+		}
+		
+		makeSecretCode()
+	}
+	
+	func makeSecretCode() {
+		for _ in 0...3 {
+			secretCode.append(Color.colorOptions.randomElement() ?? Color.silver)
 		}
 	}
 	
@@ -37,7 +50,6 @@ class GameDataModel: ObservableObject {
 		
 		if turnsRemaining >= 0 {
 			guesses[turnsRemaining].colors[beadsFilled - 1] = color
-			print(guesses[turnsRemaining].colors)
 		} else {
 			gameOver = true
 		}

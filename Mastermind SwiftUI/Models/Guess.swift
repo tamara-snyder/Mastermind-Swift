@@ -9,8 +9,8 @@ import SwiftUI
 
 class Guess: ObservableObject {
 	
-	let index: Int
 	@Published var colors = [Color](repeating: Color.silver, count: 4)
+	let index: Int
 	
 	init(index: Int) {
 		self.index = index

@@ -9,7 +9,6 @@ import SwiftUI
 
 struct GuessView: View {
 	
-	@EnvironmentObject var gameBrain: GameDataModel
 	@ObservedObject var guess: Guess
 	
     var body: some View {

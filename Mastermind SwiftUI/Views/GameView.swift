@@ -16,7 +16,7 @@ struct GameView: View {
 			Color.background.ignoresSafeArea()
 			VStack {
 				ForEach(0..<12) { i in
-					RowView(gameBrain: self.gameBrain.guesses[i])
+					RowView(guess: self.gameBrain.guesses[i], feedback: self.gameBrain.feedback[i])
 				}
 				
 				Group {
