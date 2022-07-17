@@ -8,14 +8,12 @@
 import SwiftUI
 
 class GameDataModel: ObservableObject {
-	
 	@Published var guesses: [Guess] = []
 	@Published var feedback: [Feedback] = []
-	
+	@Published var gameOver = false
 	private var secretCode: [Color] = []
 	private var turnsRemaining = 11
 	private var beadsFilled = 0
-	private var gameOver = false
 	
 	init() {
 		newGame()
@@ -24,7 +22,10 @@ class GameDataModel: ObservableObject {
 	func newGame() {
 		guesses = []
 		feedback = []
+		gameOver = false
 		secretCode = makeSecretCode()
+		turnsRemaining = 11
+		beadsFilled = 0
 		
 		for index in 0...turnsRemaining {
 			guesses.append(Guess(index: index))
@@ -59,7 +60,7 @@ class GameDataModel: ObservableObject {
 		}
 		
 		if beadsFilled == 4 {
-			getFeedback()
+			endTurn()
 		}
 	}
 	
@@ -68,6 +69,11 @@ class GameDataModel: ObservableObject {
 			beadsFilled -= 1
 			guesses[turnsRemaining].colors[beadsFilled] = Color.silver
 		}
+	}
+	
+	func endTurn() {
+		getFeedback()
+		checkGameOver()
 	}
 	
 	func getFeedback() {
@@ -87,10 +93,21 @@ class GameDataModel: ObservableObject {
 		}
 		
 		feedback[turnsRemaining].colors = currentFeedback
-		
-		if guesses[turnsRemaining].colors == secretCode {
+	}
+	
+	func checkGameOver() {
+		if turnsRemaining == 0 || guesses[turnsRemaining].colors == secretCode {
 			gameOver = true
-			print("You win!")
+		}
+	}
+	
+	func getResult() -> String {
+		if guesses[turnsRemaining].colors == secretCode {
+			return "You win!"
+		} else if turnsRemaining == 0 {
+			return "You lose."
+		} else {
+			return ""
 		}
 	}
 }

@@ -15,9 +15,15 @@ struct GameView: View {
 		ZStack {
 			Color.background.ignoresSafeArea()
 			VStack {
-				Text("MASTERMIND")
-					.font(.largeTitle)
-					.foregroundColor(Color.silver)
+				HStack {
+					Text("MASTERMIND")
+						.font(.largeTitle)
+						.foregroundColor(Color.silver)
+					Image(systemName: "chart.bar.xaxis")
+						.foregroundColor(Color.silver)
+						.font(.system(size: 40))
+						.padding(.leading)
+				}
 				ForEach(0..<12) { i in
 					RowView(guess: self.gameBrain.guesses[i], feedback: self.gameBrain.feedback[i])
 				}

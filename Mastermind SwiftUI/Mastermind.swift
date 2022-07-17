@@ -9,12 +9,14 @@ import SwiftUI
 
 @main
 struct Mastermind: App {
-	
 	@StateObject var gameData = GameDataModel()
 	
     var body: some Scene {
         WindowGroup {
 			GameView(gameBrain: gameData)
+				.popover(isPresented: $gameData.gameOver) {
+					GameOverView(gameData: gameData)
+				}
         }
     }
 }

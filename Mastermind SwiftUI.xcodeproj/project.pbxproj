@@ -14,6 +14,7 @@
 		3E120DD127E8CDA800AE4D53 /* GuessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E120DD027E8CDA800AE4D53 /* GuessView.swift */; };
 		3E9BF1C327E8C01500EB4257 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9BF1C227E8C01500EB4257 /* InputView.swift */; };
 		3E9BF1CA27E8C1FE00EB4257 /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9BF1C927E8C1FE00EB4257 /* RowView.swift */; };
+		3EB656732884A33B007230E3 /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB656722884A33B007230E3 /* GameOverView.swift */; };
 		3EC819BE2883C1A800A81B4A /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC819BD2883C1A800A81B4A /* Feedback.swift */; };
 		3ECF3AFE27E8D5840065F3DA /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECF3AFD27E8D5840065F3DA /* FeedbackView.swift */; };
 		3EDA3CAB27E3B69000799E58 /* Mastermind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDA3CAA27E3B69000799E58 /* Mastermind.swift */; };
@@ -30,6 +31,7 @@
 		3E1B607F27E8299C00C4AEE7 /* Mastermind SwiftUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Mastermind SwiftUI.entitlements"; sourceTree = "<group>"; };
 		3E9BF1C227E8C01500EB4257 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		3E9BF1C927E8C1FE00EB4257 /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
+		3EB656722884A33B007230E3 /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
 		3EC819BD2883C1A800A81B4A /* Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
 		3ECF3AFD27E8D5840065F3DA /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
 		3EDA3CA727E3B69000799E58 /* Mastermind SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mastermind SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +76,7 @@
 				3E9BF1C927E8C1FE00EB4257 /* RowView.swift */,
 				3E120DD027E8CDA800AE4D53 /* GuessView.swift */,
 				3ECF3AFD27E8D5840065F3DA /* FeedbackView.swift */,
+				3EB656722884A33B007230E3 /* GameOverView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				3E9BF1C327E8C01500EB4257 /* InputView.swift in Sources */,
 				3E120DC827E8C58D00AE4D53 /* Guess.swift in Sources */,
 				3E120DD127E8CDA800AE4D53 /* GuessView.swift in Sources */,
+				3EB656732884A33B007230E3 /* GameOverView.swift in Sources */,
 				3EDA3CAD27E3B69000799E58 /* GameView.swift in Sources */,
 				3EDA3CAB27E3B69000799E58 /* Mastermind.swift in Sources */,
 				3E120DCD27E8C63000AE4D53 /* Color.swift in Sources */,
