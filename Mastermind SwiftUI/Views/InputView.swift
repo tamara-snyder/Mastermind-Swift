@@ -9,12 +9,9 @@ import SwiftUI
 
 struct InputView: View {
 	
-	@EnvironmentObject var gameBrain: GameDataModel
-	
-	// @ObservedObject var gameBrain = GameBrain()
+	@ObservedObject var gameBrain: GameDataModel
 	
     var body: some View {
-		
 		
 		HStack {
 
@@ -60,6 +57,6 @@ struct InputView: View {
 
 struct InputView_Previews: PreviewProvider {
     static var previews: some View {
-		InputView()
+		InputView(gameBrain: GameDataModel())
     }
 }

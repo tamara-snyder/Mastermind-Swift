@@ -11,7 +11,7 @@ class GameDataModel: ObservableObject {
 	
 	@Published var guesses: [Guess] = []
 	
-	static var turn = 0
+	var turn = 0
 	var beadsFilled = 0
 	
 	init() {
@@ -19,35 +19,37 @@ class GameDataModel: ObservableObject {
 	}
 	
 	func newGame() {
-		populateDefaults()
-	}
-	
-	func populateDefaults() {
 		guesses = []
 		
 		for index in 0...11 {
 			guesses.append(Guess(index: index))
 		}
 	}
-
 	
 	func addData(color: Color) {
 		if beadsFilled <= 3 {
 			beadsFilled += 1
 		} else {
-			GameDataModel.turn += 1
+			turn += 1
 			beadsFilled = 1
 		}
 		
-		guesses[GameDataModel.turn].colors[beadsFilled - 1] = color
-		print(color)
-		print(guesses[GameDataModel.turn].colors)
+		guesses[turn].colors[beadsFilled - 1] = color
+		print(guesses[turn].colors)
 	}
 	
 	func backspacePressed() {
-		if beadsFilled >= 1 && beadsFilled < 4 {
-			guesses[GameDataModel.turn].colors[beadsFilled - 1] = Color.silver
+		if beadsFilled > 0 {
+			beadsFilled -= 1
 		}
-		print(guesses[GameDataModel.turn].colors)
+		
+		if beadsFilled >= 0 && beadsFilled < 3 && turn >= 0 {
+			guesses[turn].colors[beadsFilled] = Color.silver
+			print(beadsFilled)
+		} else if beadsFilled == -1 && turn >= 0 {
+			turn -= 1
+			beadsFilled = 3
+			backspacePressed()
+		}
 	}
 }

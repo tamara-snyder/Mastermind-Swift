@@ -9,12 +9,12 @@ import SwiftUI
 
 @main
 struct Mastermind: App {
+	
 	@StateObject var gameData = GameDataModel()
 	
     var body: some Scene {
         WindowGroup {
-			GameView()
-				.environmentObject(gameData)
+			GameView(gameBrain: GameDataModel())
         }
     }
 }

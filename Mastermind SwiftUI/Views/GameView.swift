@@ -9,42 +9,26 @@ import SwiftUI
 
 struct GameView: View {
 	
-	@EnvironmentObject var gameBrain: GameDataModel
+	@ObservedObject var gameBrain: GameDataModel
 	
     var body: some View {
 		ZStack {
 			Color.background.ignoresSafeArea()
 			VStack {
-				Group {
-					RowView()
-					RowView()
-					RowView()
-					RowView()
-					RowView()
-					RowView()
+				ForEach(0..<12) { i in
+					RowView(gameBrain: self.gameBrain.guesses[i])
 				}
 				
 				Group {
-					RowView()
-					RowView()
-					RowView()
-					RowView()
-					RowView()
-					RowView()
-				}
-				
-				Group {
-					Spacer()
-					Spacer()
-					Spacer()
-					Spacer()
+					ForEach(0..<4) { _ in
+						Spacer()
+					}
 					
-					InputView()
+					InputView(gameBrain: gameBrain)
 					
-					Spacer()
-					Spacer()
-					Spacer()
-					Spacer()
+					ForEach(0..<4) { _ in
+						Spacer()
+					}
 				}
 			}
 			.frame(maxWidth: 500, maxHeight: 1000)
@@ -54,6 +38,6 @@ struct GameView: View {
 
 struct GameView_Previews: PreviewProvider {
     static var previews: some View {
-		GameView()
+		GameView(gameBrain: GameDataModel())
     }
 }
