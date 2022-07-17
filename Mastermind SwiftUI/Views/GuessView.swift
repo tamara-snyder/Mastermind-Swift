@@ -16,7 +16,6 @@ struct GuessView: View {
 			ForEach(0...3, id: \.self) { index in
 				Circle().fill(guess.colors[index])
 			}
-			
 		}
     }
 }

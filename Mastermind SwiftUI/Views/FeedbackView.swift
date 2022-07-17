@@ -23,6 +23,7 @@ struct FeedbackView: View {
 			}
 		}
 		.aspectRatio(1, contentMode: .fit)
+		.padding(.trailing, 6)
     }
 }
 

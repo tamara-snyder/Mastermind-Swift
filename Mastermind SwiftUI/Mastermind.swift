@@ -14,7 +14,7 @@ struct Mastermind: App {
 	
     var body: some Scene {
         WindowGroup {
-			GameView(gameBrain: GameDataModel())
+			GameView(gameBrain: gameData)
         }
     }
 }

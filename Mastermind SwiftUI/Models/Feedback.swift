@@ -8,7 +8,7 @@
 import SwiftUI
 
 class Feedback: ObservableObject {
-	@Published var colors = [Color](repeating: Color.red, count: 4)
+	@Published var colors = [Color](repeating: Color.black, count: 4)
 	let index: Int
 	
 	init(index: Int) {
