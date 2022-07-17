@@ -72,23 +72,25 @@ class GameDataModel: ObservableObject {
 	
 	func getFeedback() {
 		let currentGuess: Array = guesses[turnsRemaining].colors
-		var currentFeedback: Array = feedback[turnsRemaining].colors
+		var currentFeedback: [Color] = []
+		var secretCodeCopy = secretCode
 		
 		for i in 0..<currentGuess.count {
-			print("Guess: \(currentGuess)")
-			print("Secret Code: \(secretCode)")
-			print(secretCode.contains(currentGuess[i]))
-			if secretCode.contains(currentGuess[i]) {
-				print("\(i): \(currentGuess[i] == secretCode[i])")
-				if currentGuess[i] == secretCode[i] {
-					currentFeedback[i] = Color.red
-				} else {
-					currentFeedback[i] = Color.white
-				}
+			if currentGuess[i] == secretCode[i] {
+				currentFeedback.insert(Color.red, at: 0)
+			} else if secretCodeCopy.contains(currentGuess[i]) {
+				currentFeedback.append(Color.white)
+			} else {
+				currentFeedback.append(Color.black)
 			}
+			secretCodeCopy[i] = Color.black
 		}
 		
 		feedback[turnsRemaining].colors = currentFeedback
-		print(feedback[turnsRemaining].colors)
+		
+		if guesses[turnsRemaining].colors == secretCode {
+			gameOver = true
+			print("You win!")
+		}
 	}
 }
