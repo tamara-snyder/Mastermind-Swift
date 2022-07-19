@@ -16,18 +16,12 @@ struct GameView: View {
 			Color.background.ignoresSafeArea()
 			VStack {
 				HStack {
-					Image(systemName: "gearshape.fill")
-						.foregroundColor(Color.silver)
-						.font(.system(size: 25))
 					Text("MASTERMIND")
 						.font(.title)
 						.fontWeight(.heavy)
 						.foregroundColor(Color.silver)
 						.lineLimit(nil)
 						.padding(.horizontal)
-					Image(systemName: "chart.bar.xaxis")
-						.foregroundColor(Color.silver)
-						.font(.system(size: 30))
 				}
 				
 				ForEach(0..<12) { i in
