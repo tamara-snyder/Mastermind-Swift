@@ -80,6 +80,9 @@ class GameDataModel: ObservableObject {
 		let currentGuess: Array = guesses[turnsRemaining].colors
 		var currentFeedback: [Color] = []
 		var colorCounts: [Color: Int] = [:]
+		var redCount = 0
+		var whiteCount = 0
+		var blackCount = 0
 		
 		for item in secretCode {
 			colorCounts[item] = (colorCounts[item] ?? 0) + 1
@@ -89,14 +92,24 @@ class GameDataModel: ObservableObject {
 			let countAboveZero = colorCounts[currentGuess[i]] ?? 0 > 0
 			
 			if currentGuess[i] == secretCode[i] && countAboveZero {
-				currentFeedback.insert(Color.red, at: 0)
+				redCount += 1
 				colorCounts[currentGuess[i]]! -= 1
 			} else if countAboveZero {
-				currentFeedback.append(Color.white)
+				whiteCount += 1
 				colorCounts[currentGuess[i]]! -= 1
 			} else {
-				currentFeedback.append(Color.black)
+				blackCount += 1
 			}
+		}
+		
+		for _ in 0..<redCount {
+			currentFeedback.append(Color.red)
+		}
+		for _ in 0..<whiteCount {
+			currentFeedback.append(Color.white)
+		}
+		for _ in 0..<blackCount {
+			currentFeedback.append(Color.black)
 		}
 		
 		feedback[turnsRemaining].colors = currentFeedback
