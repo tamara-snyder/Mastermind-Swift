@@ -18,29 +18,30 @@ struct GameView: View {
 				HStack {
 					Image(systemName: "gearshape.fill")
 						.foregroundColor(Color.silver)
-						.font(.system(size: 30))
+						.font(.system(size: 25))
 					Text("MASTERMIND")
-						.font(.largeTitle)
+						.font(.title)
+						.fontWeight(.heavy)
 						.foregroundColor(Color.silver)
+						.lineLimit(nil)
 						.padding(.horizontal)
 					Image(systemName: "chart.bar.xaxis")
 						.foregroundColor(Color.silver)
-						.font(.system(size: 35))
+						.font(.system(size: 30))
 				}
+				
 				ForEach(0..<12) { i in
 					RowView(guess: self.gameBrain.guesses[i], feedback: self.gameBrain.feedback[i])
 				}
 				
-				Group {
-					ForEach(0..<4) { _ in
-						Spacer()
-					}
-					
-					InputView(gameBrain: gameBrain)
-					
-					ForEach(0..<4) { _ in
-						Spacer()
-					}
+				ForEach(0..<4) { _ in
+					Spacer()
+				}
+				
+				InputView(gameBrain: gameBrain)
+				
+				ForEach(0..<4) { _ in
+					Spacer()
 				}
 			}
 			.frame(maxWidth: 500, maxHeight: 1000)
