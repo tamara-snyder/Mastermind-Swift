@@ -16,13 +16,16 @@ struct GameView: View {
 			Color.background.ignoresSafeArea()
 			VStack {
 				HStack {
+					Image(systemName: "gearshape.fill")
+						.foregroundColor(Color.silver)
+						.font(.system(size: 30))
 					Text("MASTERMIND")
 						.font(.largeTitle)
 						.foregroundColor(Color.silver)
+						.padding(.horizontal)
 					Image(systemName: "chart.bar.xaxis")
 						.foregroundColor(Color.silver)
-						.font(.system(size: 40))
-						.padding(.leading)
+						.font(.system(size: 35))
 				}
 				ForEach(0..<12) { i in
 					RowView(guess: self.gameBrain.guesses[i], feedback: self.gameBrain.feedback[i])

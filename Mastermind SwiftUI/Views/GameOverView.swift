@@ -12,22 +12,26 @@ struct GameOverView: View {
 	
 	var body: some View {
 		ZStack {
-			Color.gray
+			Color.background
 				.ignoresSafeArea()
 			
 			VStack {
-				Text("Game over. \(gameData.getResult())")
+				Text("GAME OVER")
+					.foregroundColor(Color.white)
+					.font(.largeTitle)
+					.padding()
+				Text("\(gameData.getResult())")
 					.foregroundColor(Color.white)
 					.font(.title)
+					.padding()
 					.padding()
 				Button("Play again") {
 					gameData.gameOver = false
 					gameData.newGame()
 				}
-				.cornerRadius(16)
 				.padding()
 				.foregroundColor(Color.white)
-				.background(Color.blue)
+				.background(Color.purple)
 				.font(.title)
 			}
 		}
