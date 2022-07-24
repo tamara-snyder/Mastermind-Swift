@@ -54,6 +54,7 @@ class GameDataModel: ObservableObject {
 			turnsRemaining -= 1
 			beadsFilled = 1
 		}
+		dataEntryHaptic()
 		
 		if turnsRemaining >= 0 {
 			guesses[turnsRemaining].colors[beadsFilled - 1] = color
@@ -131,5 +132,10 @@ class GameDataModel: ObservableObject {
 		} else {
 			return ""
 		}
+	}
+	
+	func dataEntryHaptic() {
+		let generator = UINotificationFeedbackGenerator()
+		generator.notificationOccurred(.success)
 	}
 }

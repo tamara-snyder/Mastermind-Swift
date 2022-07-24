@@ -42,7 +42,6 @@ struct GameView: View {
 					.popover(isPresented: $gameData.showingGameMenu) {
 						GameMenuView(gameData: gameData)
 					}
-						
 				}
 				
 				ForEach(0..<12) { i in

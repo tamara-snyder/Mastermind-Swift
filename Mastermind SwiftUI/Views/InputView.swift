@@ -14,7 +14,6 @@ struct InputView: View {
     var body: some View {
 		
 		HStack {
-
 			Circle().fill(Color.red)
 				.onTapGesture {
 					gameData.addData(color: Color.red)
