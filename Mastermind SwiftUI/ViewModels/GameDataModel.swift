@@ -12,6 +12,7 @@ class GameDataModel: ObservableObject {
 	@Published var feedback: [Feedback] = []
 	@Published var gameOver = false
 	@Published var showingGameMenu = false
+	@Published var showingSettingsMenu = false
 	private var secretCode: [Color] = []
 	private var turnsRemaining = 11
 	private var beadsFilled = 0

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct GameMenuView: View {
+	
 	@ObservedObject var gameData: GameDataModel
 	
 	var body: some View {
