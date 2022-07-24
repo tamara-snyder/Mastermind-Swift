@@ -9,7 +9,7 @@ import SwiftUI
 
 struct InputView: View {
 	
-	@ObservedObject var gameBrain: GameDataModel
+	@ObservedObject var gameData: GameDataModel
 	
     var body: some View {
 		
@@ -17,27 +17,27 @@ struct InputView: View {
 
 			Circle().fill(Color.red)
 				.onTapGesture {
-					gameBrain.addData(color: Color.red)
+					gameData.addData(color: Color.red)
 				}
 			Circle().fill(Color.orange)
 				.onTapGesture {
-					gameBrain.addData(color: Color.orange)
+					gameData.addData(color: Color.orange)
 				}
 			Circle().fill(Color.yellow)
 				.onTapGesture {
-					gameBrain.addData(color: Color.yellow)
+					gameData.addData(color: Color.yellow)
 				}
 			Circle().fill(Color.green)
 				.onTapGesture {
-					gameBrain.addData(color: Color.green)
+					gameData.addData(color: Color.green)
 				}
 			Circle().fill(Color.blue)
 				.onTapGesture {
-					gameBrain.addData(color: Color.blue)
+					gameData.addData(color: Color.blue)
 				}
 			Circle().fill(Color.purple)
 				.onTapGesture {
-					gameBrain.addData(color: Color.purple)
+					gameData.addData(color: Color.purple)
 				}
 			
 			Divider().background(Color.gray)
@@ -47,7 +47,7 @@ struct InputView: View {
 				.foregroundColor(Color.gray)
 				.font(.system(size: 32))
 				.onTapGesture {
-					gameBrain.backspacePressed()
+					gameData.backspacePressed()
 				}
 			
 		}
@@ -57,6 +57,6 @@ struct InputView: View {
 
 struct InputView_Previews: PreviewProvider {
     static var previews: some View {
-		InputView(gameBrain: GameDataModel())
+		InputView(gameData: GameDataModel())
     }
 }

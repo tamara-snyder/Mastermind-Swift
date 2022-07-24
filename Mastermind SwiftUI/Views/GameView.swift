@@ -9,30 +9,48 @@ import SwiftUI
 
 struct GameView: View {
 	
-	@ObservedObject var gameBrain: GameDataModel
+	@ObservedObject var gameData: GameDataModel
 	
     var body: some View {
 		ZStack {
 			Color.background.ignoresSafeArea()
 			VStack {
 				HStack {
+					Button {
+						gameData.showingGameMenu = true
+					} label: {
+						Image(systemName: "gear")
+							.font(.system(size: 25))
+							.foregroundColor(Color.silver)
+					}
 					Text("MASTERMIND")
 						.font(.title)
 						.fontWeight(.heavy)
 						.foregroundColor(Color.silver)
 						.lineLimit(nil)
 						.padding(.horizontal)
+					Button {
+						gameData.showingGameMenu = true
+					} label: {
+						Image(systemName: "chart.bar.xaxis")
+							.font(.system(size: 25))
+							.foregroundColor(Color.silver)
+					}
+					.popover(isPresented: $gameData.showingGameMenu) {
+						GameMenuView(gameData: gameData)
+					}
+						
 				}
 				
 				ForEach(0..<12) { i in
-					RowView(guess: self.gameBrain.guesses[i], feedback: self.gameBrain.feedback[i])
+					RowView(guess: self.gameData.guesses[i], feedback: self.gameData.feedback[i])
 				}
 				
 				ForEach(0..<4) { _ in
 					Spacer()
 				}
 				
-				InputView(gameBrain: gameBrain)
+				InputView(gameData: gameData)
 				
 				ForEach(0..<4) { _ in
 					Spacer()
@@ -45,6 +63,6 @@ struct GameView: View {
 
 struct GameView_Previews: PreviewProvider {
     static var previews: some View {
-		GameView(gameBrain: GameDataModel())
+		GameView(gameData: GameDataModel())
     }
 }

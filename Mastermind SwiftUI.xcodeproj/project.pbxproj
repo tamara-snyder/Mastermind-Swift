@@ -12,6 +12,9 @@
 		3E120DCD27E8C63000AE4D53 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E120DCC27E8C63000AE4D53 /* Color.swift */; };
 		3E120DCF27E8C77700AE4D53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E120DCE27E8C77700AE4D53 /* Assets.xcassets */; };
 		3E120DD127E8CDA800AE4D53 /* GuessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E120DD027E8CDA800AE4D53 /* GuessView.swift */; };
+		3E800C92288DA24B00B45AB2 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3E800C90288DA24B00B45AB2 /* DataModel.xcdatamodeld */; };
+		3E800C94288DA41300B45AB2 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E800C93288DA41300B45AB2 /* DataController.swift */; };
+		3E800C96288DC48500B45AB2 /* GameMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E800C95288DC48500B45AB2 /* GameMenuView.swift */; };
 		3E9BF1C327E8C01500EB4257 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9BF1C227E8C01500EB4257 /* InputView.swift */; };
 		3E9BF1CA27E8C1FE00EB4257 /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9BF1C927E8C1FE00EB4257 /* RowView.swift */; };
 		3EB656732884A33B007230E3 /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB656722884A33B007230E3 /* GameOverView.swift */; };
@@ -29,6 +32,9 @@
 		3E120DCE27E8C77700AE4D53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../Mastermind/Mastermind/Assets.xcassets; sourceTree = "<group>"; };
 		3E120DD027E8CDA800AE4D53 /* GuessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessView.swift; sourceTree = "<group>"; };
 		3E1B607F27E8299C00C4AEE7 /* Mastermind SwiftUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Mastermind SwiftUI.entitlements"; sourceTree = "<group>"; };
+		3E800C91288DA24B00B45AB2 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		3E800C93288DA41300B45AB2 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		3E800C95288DC48500B45AB2 /* GameMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMenuView.swift; sourceTree = "<group>"; };
 		3E9BF1C227E8C01500EB4257 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		3E9BF1C927E8C1FE00EB4257 /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
 		3EB656722884A33B007230E3 /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
@@ -54,6 +60,8 @@
 		3E120DC627E8C57100AE4D53 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3E800C90288DA24B00B45AB2 /* DataModel.xcdatamodeld */,
+				3E800C93288DA41300B45AB2 /* DataController.swift */,
 				3E120DC727E8C58D00AE4D53 /* Guess.swift */,
 				3EC819BD2883C1A800A81B4A /* Feedback.swift */,
 			);
@@ -77,6 +85,7 @@
 				3E120DD027E8CDA800AE4D53 /* GuessView.swift */,
 				3ECF3AFD27E8D5840065F3DA /* FeedbackView.swift */,
 				3EB656722884A33B007230E3 /* GameOverView.swift */,
+				3E800C95288DC48500B45AB2 /* GameMenuView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -207,7 +216,10 @@
 				3E120DD127E8CDA800AE4D53 /* GuessView.swift in Sources */,
 				3EB656732884A33B007230E3 /* GameOverView.swift in Sources */,
 				3EDA3CAD27E3B69000799E58 /* GameView.swift in Sources */,
+				3E800C92288DA24B00B45AB2 /* DataModel.xcdatamodeld in Sources */,
 				3EDA3CAB27E3B69000799E58 /* Mastermind.swift in Sources */,
+				3E800C96288DC48500B45AB2 /* GameMenuView.swift in Sources */,
+				3E800C94288DA41300B45AB2 /* DataController.swift in Sources */,
 				3E120DCD27E8C63000AE4D53 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,6 +433,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3E800C90288DA24B00B45AB2 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3E800C91288DA24B00B45AB2 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 3E800C91288DA24B00B45AB2 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3EDA3C9F27E3B69000799E58 /* Project object */;
 }
