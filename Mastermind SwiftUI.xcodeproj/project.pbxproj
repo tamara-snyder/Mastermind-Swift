@@ -15,7 +15,7 @@
 		3E800C92288DA24B00B45AB2 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3E800C90288DA24B00B45AB2 /* DataModel.xcdatamodeld */; };
 		3E800C94288DA41300B45AB2 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E800C93288DA41300B45AB2 /* DataController.swift */; };
 		3E800C96288DC48500B45AB2 /* GameMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E800C95288DC48500B45AB2 /* GameMenuView.swift */; };
-		3E800C98288DD0A000B45AB2 /* SettingsMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E800C97288DD0A000B45AB2 /* SettingsMenuView.swift */; };
+		3E800C98288DD0A000B45AB2 /* InstructionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E800C97288DD0A000B45AB2 /* InstructionsView.swift */; };
 		3E9BF1C327E8C01500EB4257 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9BF1C227E8C01500EB4257 /* InputView.swift */; };
 		3E9BF1CA27E8C1FE00EB4257 /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9BF1C927E8C1FE00EB4257 /* RowView.swift */; };
 		3EB656732884A33B007230E3 /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB656722884A33B007230E3 /* GameOverView.swift */; };
@@ -36,9 +36,10 @@
 		3E800C91288DA24B00B45AB2 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		3E800C93288DA41300B45AB2 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		3E800C95288DC48500B45AB2 /* GameMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMenuView.swift; sourceTree = "<group>"; };
-		3E800C97288DD0A000B45AB2 /* SettingsMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsMenuView.swift; sourceTree = "<group>"; };
+		3E800C97288DD0A000B45AB2 /* InstructionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsView.swift; sourceTree = "<group>"; };
 		3E9BF1C227E8C01500EB4257 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		3E9BF1C927E8C1FE00EB4257 /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
+		3EAC753B2898BAF500495731 /* Mastermind-SwiftUI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Mastermind-SwiftUI-Info.plist"; sourceTree = SOURCE_ROOT; };
 		3EB656722884A33B007230E3 /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
 		3EC819BD2883C1A800A81B4A /* Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
 		3ECF3AFD27E8D5840065F3DA /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
@@ -88,7 +89,7 @@
 				3ECF3AFD27E8D5840065F3DA /* FeedbackView.swift */,
 				3EB656722884A33B007230E3 /* GameOverView.swift */,
 				3E800C95288DC48500B45AB2 /* GameMenuView.swift */,
-				3E800C97288DD0A000B45AB2 /* SettingsMenuView.swift */,
+				3E800C97288DD0A000B45AB2 /* InstructionsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -120,6 +121,7 @@
 		3EDA3CA927E3B69000799E58 /* Mastermind SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				3EAC753B2898BAF500495731 /* Mastermind-SwiftUI-Info.plist */,
 				3E120DCB27E8C61D00AE4D53 /* Extensions */,
 				3E120DC627E8C57100AE4D53 /* Models */,
 				3E9BF1C427E8C05600EB4257 /* ViewModels */,
@@ -216,7 +218,7 @@
 				3E120DC527E8C55C00AE4D53 /* GameDataModel.swift in Sources */,
 				3E9BF1C327E8C01500EB4257 /* InputView.swift in Sources */,
 				3E120DC827E8C58D00AE4D53 /* Guess.swift in Sources */,
-				3E800C98288DD0A000B45AB2 /* SettingsMenuView.swift in Sources */,
+				3E800C98288DD0A000B45AB2 /* InstructionsView.swift in Sources */,
 				3E120DD127E8CDA800AE4D53 /* GuessView.swift in Sources */,
 				3EB656732884A33B007230E3 /* GameOverView.swift in Sources */,
 				3EDA3CAD27E3B69000799E58 /* GameView.swift in Sources */,
@@ -359,10 +361,10 @@
 				DEVELOPMENT_TEAM = 54HS5MM6W8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Mastermind-SwiftUI-Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.board-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -393,10 +395,10 @@
 				DEVELOPMENT_TEAM = 54HS5MM6W8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Mastermind-SwiftUI-Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.board-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;

@@ -17,14 +17,14 @@ struct GameView: View {
 			VStack {
 				HStack {
 					Button {
-						gameData.showingSettingsMenu = true
+						gameData.showingInstructions = true
 					} label: {
-						Image(systemName: "gear")
+						Image(systemName: "questionmark.square.fill")
 							.font(.system(size: 25))
 							.foregroundColor(Color.silver)
 					}
-					.popover(isPresented: $gameData.showingSettingsMenu) {
-						SettingsMenuView(gameData: gameData)
+					.popover(isPresented: $gameData.showingInstructions) {
+						InstructionsView(gameData: gameData)
 					}
 					Text("MASTERMIND")
 						.font(.title)
